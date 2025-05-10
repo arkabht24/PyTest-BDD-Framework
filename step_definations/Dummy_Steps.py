@@ -15,10 +15,10 @@ def user_fill_ups_login_form(username, password):
     print("Password - ",password)
 
 
-@pytest.mark.parametrize("username,password,expectedResult",[(row['username'],row['password'],
-    row['expectedResult']) for row in excel_data])
-def test_login_print(username,password,expectedResult):
-    user_fill_ups_login_form(username,password)
+# @pytest.mark.parametrize("username,password,expectedResult",[(row['username'],row['password'],
+#     row['expectedResult']) for row in excel_data])
+# def test_login_print(username,password,expectedResult):
+#     user_fill_ups_login_form(username,password)
 
 
 

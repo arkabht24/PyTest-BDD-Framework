@@ -6,4 +6,5 @@ Feature: Login functionality
 
     Examples:
       | username | password | expectedResult |
+      | arka | pass | yes |
       
