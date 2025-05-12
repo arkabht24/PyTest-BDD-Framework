@@ -26,3 +26,29 @@ class Base:
             element.send_keys(text)
         except:
             self.driver.execute_script("arguments[0].value = arguments[1];",element,text)
+
+
+    
+    def verify_element_is_displayed(self, element_key):
+        try:
+            if self.driver.find_element(*self.locators[element_key]).is_displayed():
+                print("Element is present in UI")
+                return True
+            else:
+                print("Element is NOT present in UI but is hidden.")
+                return False
+        except:
+            print("Element is NOT present in UI")
+            return False
+        
+
+
+    def get_element_text(self,element_key):
+        try:
+            text = self.driver.find_element(*self.locators[element_key]).text
+            print('Text from UI ---> ',text)
+            return text
+        
+        except:
+            print('No Text foind in UI ---> ')
+            return ''

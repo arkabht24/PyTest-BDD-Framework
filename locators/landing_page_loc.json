@@ -1,0 +1,4 @@
+{
+    "BUZZ" : ["xpath","//li/a/span[(text()='Buzz')]"],
+    "BUZZ_CLICK" : ["xpath","//li/a/span[(text()='Buzz')]/.."]
+}
